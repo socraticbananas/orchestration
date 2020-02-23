@@ -1,0 +1,12 @@
+[submodule "engineering_blog"]
+	path = engineering_blog
+	url = git@github.com:socraticbananas/engineering_blog.git
+[submodule "architecture"]
+	path = architecture
+	url = git@github.com:socraticbananas/architecture.git
+[submodule "soba/soba_web"]
+	path = soba/soba_web
+	url = git@github.com:socraticbananas/soba_web.git
+[submodule "soba/soba_api"]
+	path = soba/soba_api
+	url = git@github.com:socraticbananas/soba_api.git

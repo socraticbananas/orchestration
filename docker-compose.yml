@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  soba_db:
+    image: postgres
+    container_name: soba_db
+    ports:
+      - 8001:5432
+    environment:
+      - POSTGRES_PASSWORD=bananas
+  soba_api:
+    build: ./soba/soba_api
+    container_name: soba_api
+    command: python ./soba/soba_api/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - soba_db
+  engineering_blog:
+    image: ghost
+    container_name: engineering_blog
+    restart: always
+    ports:
+      - 2368:2368
